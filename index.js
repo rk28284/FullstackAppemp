@@ -18,12 +18,12 @@ app.get("/", (req, res) => {
 app.use("/user", userRouter);
 app.use(authentication)
 app.use("/employee", dashboardRouter);
-// app.listen(port, async () => {
-//   try {
-//     await connection;
-//     console.log("Connnection succesfully");
-//   } catch (error) {
-//     console.log(error);
-//   }
-//   console.log("Running at port 7070");
-// });
+app.listen(port, async () => {
+  try {
+    await connection;
+    console.log("Connnection succesfully");
+  } catch (error) {
+    console.log(error);
+  }
+  console.log("Running at port 7070");
+});

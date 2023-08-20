@@ -19,7 +19,7 @@ userRouter.post("/signup", async (req, res) => {
         if (err) {
           console.log(err);
         } else {
-            console.log(password,cnfpassword);
+            // console.log(password,cnfpassword);
           const user = new UserModel({
             email,
             age,
@@ -29,12 +29,12 @@ userRouter.post("/signup", async (req, res) => {
           
           await user.save();
         //   res.json(user)
-          console.log(user);
+          // console.log(user);
         }
       });
     } catch (error) {
       res.send({ message: "error in registering the user" });
-      console.log(error.message);
+      // console.log(error.message);
     }
   } else {
     res.send({ message: "password and conform password not matching" });
